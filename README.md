@@ -13,7 +13,7 @@ git clone <your-github-repo-url>
 
 ### **2. Navigate into the Project Directory**  
 ```sh
-cd receipt-processor
+cd receipt_processor
 ```
 
 ### **3. Create a Virtual Environment**  
