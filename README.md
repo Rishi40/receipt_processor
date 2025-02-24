@@ -106,7 +106,7 @@ GET http://127.0.0.1:8000/receipts/7fb1377b-b223-49d9-a31a-5a02701dd310/points
 
 ---
 
-## **📖 Walkthrough: Using Swagger UI to Test the API**  
+## **Walkthrough: Using Swagger UI to Test the API**  
 
 **Swagger UI** provides an interactive way to test your API **without needing external tools** like Postman. This guide walks you through how to use Swagger UI to send requests and see responses.  
 
@@ -170,7 +170,7 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
 
 ---
 
-## ** 4. (Optional) Retrieve All Stored Receipts (`GET /receipts`)**  
+## **4. (Optional) Retrieve All Stored Receipts (`GET /receipts`)**  
 
 > **Note:** This endpoint is for debugging purposes only.
 
