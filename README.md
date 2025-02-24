@@ -190,8 +190,7 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
         {"shortDescription": "Doritos Nacho Cheese", "price": "3.35"}
       ],
       "total": "9.84"
-    },
-    "points": 32
+    }
   }
 }
 ```
