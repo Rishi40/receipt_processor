@@ -118,6 +118,8 @@ Once your FastAPI server is running (`uvicorn app.main:app --reload`), open:
 - **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**  
 
 You should see a **list of API endpoints**, each with an **"Try it out"** button.
+![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/19844baf-317e-4f39-be7c-8a6eddecf292)
+![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/9bfd3dec-aceb-44e2-a5c0-5c5494345f48)
 
 ---
 
@@ -130,16 +132,29 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
 
 ```json
 {
-  "retailer": "Target",
-  "purchaseDate": "2022-01-01",
-  "purchaseTime": "13:01",
+  "retailer": "M&M Corner Market",
+  "purchaseDate": "2022-03-20",
+  "purchaseTime": "14:33",
   "items": [
-    {"shortDescription": "Mountain Dew 12PK", "price": "6.49"},
-    {"shortDescription": "Doritos Nacho Cheese", "price": "3.35"}
+    {
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    }
   ],
-  "total": "9.84"
+  "total": "9.00"
 }
 ```
+
+![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/f07a61a9-ae57-446f-94e3-51c853f555b1)
 
 5️) Click **"Execute"**.  
 6️) In the response section, you will see a **generated receipt ID**:  
@@ -151,6 +166,8 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
 ```
 
 > **Note:**: Save the **ID**, as you’ll need it for the next step.
+
+![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/73cffe18-8b7c-401d-ae00-38f3841e1889)
 
 ---
 
@@ -164,9 +181,11 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
 
 ```json
 {
-  "points": 32
+  "points": 109
 }
 ```
+![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/b3c9ac81-94f8-43d8-824d-41b3a030ac60)
+
 
 ---
 
@@ -194,6 +213,7 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
   }
 }
 ```
+![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/70810629-bc42-4d8a-894b-9406eef79092)
 
 ---
 
