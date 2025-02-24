@@ -39,11 +39,16 @@ uvicorn app.main:app --reload
 
 ### **7️. Open the API in a Browser**  
 Once the server starts, open:  
-👉 **[http://127.0.0.1:8000](http://127.0.0.1:8000)**  
+**[http://127.0.0.1:8000](http://127.0.0.1:8000)**  
+> **Note:** This URL serves as the base for the API but does not display any content directly. If you open it in a browser, you will see a message:  
+> ```json
+> {"detail":"Not Found"}
+> ```
+> This is expected, as the API does not have a default home route. To interact with the API, see point 8 or send requests using tools like **Postman** or `curl`.
 
 ### **8️. Open Swagger UI for API Documentation**  
-👉 **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**  
-You can interact with the API and test endpoints on the above url.
+**[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**  
+You can interact with the API and test endpoints on this url.
 
 ---
 
