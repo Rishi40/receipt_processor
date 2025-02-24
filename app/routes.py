@@ -3,23 +3,22 @@ from fastapi.responses import JSONResponse
 from app.error_validation import validate_receipt
 from app.data_store import save_receipt, get_receipt, receipt_store
 from app.points_calculation import calculate_points
+from app.models import Receipt
 
 app = FastAPI()
 
 router = APIRouter()
 
 @router.post("/receipts/process")
-async def process_receipt(request: Request):
-    try:
-        data = await request.json()
-    except Exception:
-        return JSONResponse(status_code=400, content={"detail": "The receipt is invalid."})
+async def process_receipt(receipt: Receipt):
+
+    receipt_dict = receipt.model_dump()
+    validated_receipt, error = validate_receipt(receipt_dict)
     
-    receipt, error = validate_receipt(data)
     if error:
         return JSONResponse(status_code=400, content={"detail": error})
     
-    receipt_id = save_receipt(receipt.dict())
+    receipt_id = save_receipt(validated_receipt)
     return {"id": receipt_id}
 
 @router.get("/receipts/{id}/points")
@@ -31,10 +30,10 @@ async def get_points(id: str):
     return {"points": points}
 
 # Debug API to get list of all receipts
-# @router.get("/receipts", summary="Get all receipts")
-# async def get_all_receipts():
-#     if not receipt_store:
-#         return {"message": "No receipts found."}
-#     return receipt_store
+@router.get("/receipts", summary="Get all receipts")
+async def get_all_receipts():
+    if not receipt_store:
+        return {"message": "No receipts found."}
+    return receipt_store
 
 app.include_router(router)
