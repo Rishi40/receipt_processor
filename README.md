@@ -112,7 +112,7 @@ GET http://127.0.0.1:8000/receipts/7fb1377b-b223-49d9-a31a-5a02701dd310/points
 
 ---
 
-## **1. Open Swagger UI**  
+### **1. Open Swagger UI**  
 
 Once your FastAPI server is running (`uvicorn app.main:app --reload`), open:  
 - **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**  
@@ -121,7 +121,7 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
 
 ---
 
-## **2. Submit a Receipt (`POST /receipts/process`)**  
+### **2. Submit a Receipt (`POST /receipts/process`)**  
 
 1️) Scroll down to the **`POST /receipts/process`** section.  
 2️) Click on **"Try it out"** (top right of the section).  
@@ -154,7 +154,7 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
 
 ---
 
-## **3. Retrieve Points (`GET /receipts/{id}/points`)**  
+### **3. Retrieve Points (`GET /receipts/{id}/points`)**  
 
 1️) Scroll to **`GET /receipts/{id}/points`**.  
 2️) Click **"Try it out"**.  
@@ -170,7 +170,7 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
 
 ---
 
-## **4. (Optional) Retrieve All Stored Receipts (`GET /receipts`)**  
+### **4. (Optional) Retrieve All Stored Receipts (`GET /receipts`)**  
 
 > **Note:** This endpoint is for debugging purposes only.
 
