@@ -161,7 +161,7 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
 
 ```json
 {
-  "id": "7fb1377b-b223-49d9-a31a-5a02701dd310"
+  "id": "db31755f-fbe8-4ba7-87f0-86af6d6b2657"
 }
 ```
 
