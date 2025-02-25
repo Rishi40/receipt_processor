@@ -118,8 +118,8 @@ Once your FastAPI server is running (`uvicorn app.main:app --reload`), open:
 - **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**  
 
 You should see a **list of API endpoints**, each with an **"Try it out"** button.
-![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/19844baf-317e-4f39-be7c-8a6eddecf292)
-![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/9bfd3dec-aceb-44e2-a5c0-5c5494345f48)
+![image](https://github.com/user-attachments/assets/1d54b4c8-ba92-4ca8-b6ff-882f02ee6ab8)
+![image](https://github.com/user-attachments/assets/519657b1-0372-4214-99cd-6ef658e3019d)
 
 ---
 
@@ -154,7 +154,7 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
 }
 ```
 
-![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/f07a61a9-ae57-446f-94e3-51c853f555b1)
+![image](https://github.com/user-attachments/assets/0a4f1d2e-69ad-44eb-818a-24b5a1b31358)
 
 5️) Click **"Execute"**.  
 6️) In the response section, you will see a **generated receipt ID**:  
@@ -167,7 +167,7 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
 
 > **Note:**: Save the **ID**, as you’ll need it for the next step.
 
-![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/73cffe18-8b7c-401d-ae00-38f3841e1889)
+![image](https://github.com/user-attachments/assets/deb01a52-2064-4c74-b334-db8aee5b862e)
 
 ---
 
@@ -184,8 +184,7 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
   "points": 109
 }
 ```
-![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/b3c9ac81-94f8-43d8-824d-41b3a030ac60)
-
+![image](https://github.com/user-attachments/assets/e29758a1-9541-414d-bfe8-ab60119c83da)
 
 ---
 
@@ -213,7 +212,7 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
   }
 }
 ```
-![image](https://github.coecis.cornell.edu/rp657/receipt_processor/assets/17062/70810629-bc42-4d8a-894b-9406eef79092)
+![image](https://github.com/user-attachments/assets/00abd1a5-7a2c-4bb2-9c98-fce9c7af0cd6)
 
 ---
 
