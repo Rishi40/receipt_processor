@@ -217,21 +217,45 @@ You should see a **list of API endpoints**, each with an **"Try it out"** button
 
 ---
 
-## **5. Handling Errors in Swagger UI**  
+## **5. Handling Errors in Swagger UI**
 
-### **1. Missing Required Field (400 Bad Request)**  
-- If you forget a required field (e.g., missing `retailer`), you'll see:  
+### **1. Missing or Incorrect Field Types (400 Bad Request)**
+- **Missing Required Field:**  
+  If you forget to include a required field (for example, omitting `retailer`), the API will respond with:
+  ```json
+  {
+    "detail": "The receipt is invalid."
+  }
+  ```
+  🔹 **Fix:** Ensure all required fields (`retailer`, `purchaseDate`, `purchaseTime`, `items`, and `total`) are provided.
 
-```json
-{
-  "detail": "The receipt is invalid."
-}
-```
-🔹 **Fix:** Make sure all fields are correctly entered.
+- **Incorrect Field Type:**  
+  If a field is provided but its type does not match the expected format (for example, passing a number instead of a string for `total`), the API will also respond with:
+  ```json
+  {
+    "detail": "The receipt is invalid."
+  }
+  ```
+  🔹 **Fix:** Double-check that each field uses the correct type (e.g., `total` must be a string matching the pattern `^\d+\.\d{2}$`).
+
+### **2. Invalid JSON Input (422 Unprocessable Entity)**
+- If the JSON input itself is malformed or not valid JSON (for example, missing quotes around string values), FastAPI will automatically throw a 422 error with details on the JSON decoding error.
+  ```json
+  {
+    "detail": [
+      {
+        "loc": ["body"],
+        "msg": "Expecting value: line 1 column 1 (char 0)",
+        "type": "value_error.jsondecode"
+      }
+    ]
+  }
+  ```
+  🔹 **Fix:** Ensure your request body is valid JSON. For example, string values must be enclosed in double quotes.
 
 ---
 
-### **2. Invalid Receipt ID (404 Not Found)**  
+### **3. Invalid Receipt ID (404 Not Found)**  
 - If you enter an **invalid** receipt ID in `GET /receipts/{id}/points`, you'll see:
 
 ```json
